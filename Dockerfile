@@ -17,5 +17,10 @@ ARG JAR_FILE=target/postgres-demo-0.0.1-SNAPSHOT.jar
 ADD ${JAR_FILE} postgres-demo.jar
 
 # Run the jar file 
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/ng5-api.jar"]
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/postgres-demo.jar"]
  
+# docker build
+# sudo docker build -t alberto21/postgres-demo .
+
+# docker run
+# sudo docker run --name ramosgla-api -p 5025:8080 alberto21/postgres-demo
